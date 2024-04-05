@@ -29,7 +29,8 @@ payPalPay(context, {required CheckoutConfirmationPageState state, TaxRate? taxRa
     WooSignalApp? wooSignalApp = AppHelper.instance.appConfig;
 
     List<CartLineItem> cartLineItems = await cart.getCart();
-    String cartTotal = await cart.getTotal();
+    String subtotal = await cart.getSubtotal();
+    String taxTotal = await cart.taxAmount(taxRate);
     String? currencyCode = wooSignalApp?.currencyMeta?.code;
 
     String shippingTotal = CheckoutSession.getInstance.shippingType?.getTotal() ?? "0";
@@ -50,9 +51,10 @@ payPalPay(context, {required CheckoutConfirmationPageState state, TaxRate? taxRa
               "total": total,
               "currency": currencyCode?.toUpperCase(),
               "details": {
-                "subtotal": cartTotal,
+                "subtotal": subtotal,
                 "shipping": shippingTotal,
-                "shipping_discount": 0
+                "shipping_discount": 0,
+                "tax": taxTotal
               }
             },
             "description": description,
