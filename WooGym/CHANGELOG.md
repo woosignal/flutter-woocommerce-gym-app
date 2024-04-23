@@ -1,3 +1,7 @@
+## [1.6.3] - 2024-04-23
+
+* Pubspec dependency updates
+
 ## [1.6.2] - 2024-04-13
 
 * Pubspec dependency updates
