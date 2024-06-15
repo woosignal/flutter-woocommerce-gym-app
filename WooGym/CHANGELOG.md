@@ -1,3 +1,9 @@
+## [1.6.7] - 2024-06-15
+
+* Migrate to latest version of Nylo
+* Pubspec dependency updates
+* Remove pubspec.lock
+
 ## [1.6.6] - 2024-05-15
 
 * Pubspec dependency updates

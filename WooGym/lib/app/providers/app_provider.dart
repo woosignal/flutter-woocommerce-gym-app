@@ -99,6 +99,7 @@ class AppProvider implements NyProvider {
     nylo.addValidationRules(validationRules);
     nylo.addControllers(controllers);
     nylo.addApiDecoders(apiDecoders);
+    nylo.useErrorStack();
 
     String? redirectPathAfterAuth =
         await NyStorage.read(StorageKey.redirectPathAfterAuth);
