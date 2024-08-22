@@ -54,6 +54,7 @@ dependencies:
   flutter_paypal_payment: ^1.0.6
   table_calendar: ^3.1.2
   firebase_core: ^2.31.0
+  win32: ^5.5.4
   flutter:
     sdk: flutter
   flutter_localizations:
